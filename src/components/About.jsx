@@ -3,12 +3,14 @@ import images from "../assets/images";
 import {
   FaReact,
   FaNodeJs,
+  FaJs,
   FaHtml5,
   FaCss3Alt,
-  FaGithub,
+  FaGitAlt,
+  FaDatabase,
   FaLock,
 } from "react-icons/fa";
-import { SiExpress, SiMongodb, SiPostman, SiCplusplus, SiThunderbird, SiMysql } from "react-icons/si";
+import { SiExpress, SiMongodb, SiPostman, SiCplusplus, SiThunderbird, SiRedux } from "react-icons/si";
 import { TbApi } from "react-icons/tb";
 
 const skills = [
@@ -20,12 +22,12 @@ const skills = [
   { name: "C++", icon: <SiCplusplus className="text-blue-600 text-3xl" /> },
   { name: "HTML", icon: <FaHtml5 className="text-orange-500 text-3xl" /> },
   { name: "CSS", icon: <FaCss3Alt className="text-blue-500 text-3xl" /> },
-  { name: "GitHub", icon: <FaGithub className="text-gray-800 text-3xl" /> },
+  { name: "Git", icon: <FaGitAlt className="text-red-500 text-3xl" /> },
   { name: "JWT", icon: <FaLock className="text-yellow-500 text-3xl" /> },
   { name: "REST API", icon: <TbApi className="text-purple-500 text-3xl" /> },
   { name: "Postman", icon: <SiPostman className="text-orange-400 text-3xl" /> },
   { name: "Thunder Client", icon: <SiThunderbird className="text-blue-400 text-3xl" /> },
-  { name: "MySQL", icon: <SiMysql className="text-purple-600 text-3xl" /> },
+  { name: "Redux", icon: <SiRedux className="text-purple-600 text-3xl" /> },
 ];
 
 const About = () => {

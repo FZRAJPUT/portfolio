@@ -5,11 +5,10 @@ import Projects from "./components/Projects"
 import Resume from "./components/Resume"
 import Contact from "./components/Contact"
 import Footer from "./components/Footer"
-import './App.css'
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    (<main className="min-h-screen">
       <Navbar />
       <Hero />
       <About />
@@ -17,6 +16,7 @@ export default function Home() {
       <Resume />
       <Contact />
       <Footer />
-    </main>
-  )
+    </main>)
+  );
 }
+

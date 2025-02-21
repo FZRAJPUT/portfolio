@@ -19,6 +19,7 @@ const Home = () => {
           <Code className="h-5 w-5" />
           View Projects
         </Button>
+        <Button>Hello</Button>
       </div>
     </div>
   </section>

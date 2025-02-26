@@ -1,13 +1,14 @@
 import { BrowserRouter as Router } from "react-router-dom"
 import { ThemeProvider } from "./components/ThemeProvider"
-import Hero from "./components/Hero"
-import About from "./components/About"
-import Experience from "./components/Experience"
+import Navbar from "./components/navbar"
+import Hero from "./components/hero"
+import About from "./components/about"
+import Experience from "./components/experience"
 import Education from "./components/Education"
-import Projects from "./components/Projects"
-import Contact from "./components/Contact"
-import Footer from "./components/Footer"
-import Navbar from "./components/Navbar"
+import Projects from "./components/projects"
+import Contact from "./components/contact"
+import Footer from "./components/footer"
+
 
 
 function App() {

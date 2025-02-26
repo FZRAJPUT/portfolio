@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Moon, Sun, Menu, X } from "lucide-react";
-import { useTheme } from "./theme-provider";
+import { useTheme } from "./ThemeProvider";
 import { Button } from "./ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 

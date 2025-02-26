@@ -1,12 +1,19 @@
-import { motion } from "framer-motion"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "./ui/card"
-import { Button } from "./ui/button"
-import { Github, Globe } from "lucide-react"
-import project_1 from './project-1.png'
-import project_2 from './project-2.jpg'
-import project_3 from './project-3.jpg'
-import project_4 from './project-4.avif'
-import project_5 from './project-5.jpg'
+import { motion } from "framer-motion";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "./ui/card";
+import { Button } from "./ui/button";
+import { Github, Globe } from "lucide-react";
+import project_1 from "./project-1.png";
+import project_2 from "./project-2.jpg";
+import project_3 from "./project-3.jpg";
+import project_4 from "./project-4.avif";
+import project_5 from "./project-5.jpg";
 
 const projects = [
   {
@@ -35,7 +42,8 @@ const projects = [
   },
   {
     title: "3D Navigation Android App",
-    description: "An Application in which you can navigate in 3D view of places and buildings.",
+    description:
+      "An Application in which you can navigate in 3D view of places and buildings.",
     image: project_4,
     github: "https://github.com/FZRAJPUT/3D-Explorer",
     demo: "#",
@@ -49,7 +57,7 @@ const projects = [
     demo: "https://clima-buzz.vercel.app",
     tags: ["React", "API's", "OpenWeatherMap API"],
   },
-]
+];
 
 export default function Projects() {
   return (
@@ -75,30 +83,38 @@ export default function Projects() {
               </CardHeader>
               <CardContent className="p-6">
                 <CardTitle className="mb-2">{project.title}</CardTitle>
-                <CardDescription className="mb-4">{project.description}</CardDescription>
+                <CardDescription className="mb-4">
+                  {project.description}
+                </CardDescription>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag) => (
-                    <span key={tag} className="px-2 py-1 text-xs rounded-full bg-primary/10 text-primary">
+                    <span
+                      key={tag}
+                      className="px-2 py-1 text-xs rounded-full bg-primary/10 text-primary"
+                    >
                       {tag}
                     </span>
                   ))}
                 </div>
               </CardContent>
               <CardFooter className="flex gap-4">
-                <Button variant="outline" size="sm">
-                  <Github className="w-4 h-4 mr-2" />
-                  Code
-                </Button>
-                <Button size="sm">
-                  <Globe className="w-4 h-4 mr-2" />
-                  Demo
-                </Button>
+                <a href={project.github} target="_blank">
+                  <Button variant="outline" size="sm">
+                    <Github className="w-4 h-4 mr-2" />
+                    Code
+                  </Button>
+                </a>
+                <a href={project.demo} target="_blank">
+                  <Button size="sm">
+                    <Globe className="w-4 h-4 mr-2" />
+                    Demo
+                  </Button>
+                </a>
               </CardFooter>
             </Card>
           ))}
         </div>
       </motion.div>
     </section>
-  )
+  );
 }
-

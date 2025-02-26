@@ -24,7 +24,7 @@ const educationData = [
 
 export default function Education() {
   return (
-    <div id="education" className="space-y-6 lg:w-[768px] py-24">
+    <div id="education" className="space-y-6 sm:w-[768px] py-24">
         <h2 className="text-3xl font-bold text-center mb-8">Education</h2>
       {educationData.map((edu, index) => (
         <Card key={index}>

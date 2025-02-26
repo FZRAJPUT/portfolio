@@ -1,83 +1,104 @@
-const ProjectCard = ({ title, description, image, tech, demoLink, codeLink }) => (
-  <div
-    className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-    <img
-      src={image || "/placeholder.svg"}
-      alt={title}
-      className="w-full h-48 object-cover" />
-    <div className="p-6">
-      <h3 className="text-xl font-bold mb-2">{title}</h3>
-      <p className="text-gray-600 mb-4">{description}</p>
-      <div className="flex flex-wrap gap-2 mb-4">
-        {tech.map((item) => (
-          <span
-            key={item}
-            className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm">
-            {item}
-          </span>
-        ))}
-      </div>
-      <div className="flex gap-4">
-        <a
-          href={demoLink}
-          className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
-          target="_blank"
-          rel="noopener noreferrer">
-          Live Demo
-        </a>
-        <a
-          href={codeLink}
-          className="px-4 py-2 border border-purple-600 text-purple-600 rounded-lg hover:bg-purple-50 transition-colors"
-          target="_blank"
-          rel="noopener noreferrer">
-          View Code
-        </a>
-      </div>
-    </div>
-  </div>
-)
+import { motion } from "framer-motion"
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "./ui/card"
+import { Button } from "./ui/button"
+import { Github, Globe } from "lucide-react"
+import project_1 from './project-1.png'
+import project_2 from './project-2.jpg'
+import project_3 from './project-3.jpg'
+import project_4 from './project-4.avif'
+import project_5 from './project-5.jpg'
 
-const Projects = () => {
-  const projects = [
-    {
-      title: "Project One",
-      description: "A modern web application built with React.js and Node.js",
-      image: "/placeholder.svg?height=400&width=600",
-      tech: ["React", "Node.js", "MongoDB"],
-      demoLink: "#",
-      codeLink: "#",
-    },
-    {
-      title: "Project Two",
-      description: "E-commerce platform with payment integration",
-      image: "/placeholder.svg?height=400&width=600",
-      tech: ["Next.js", "Stripe", "PostgreSQL"],
-      demoLink: "#",
-      codeLink: "#",
-    },
-    {
-      title: "Project Three",
-      description: "Social media dashboard with real-time updates",
-      image: "/placeholder.svg?height=400&width=600",
-      tech: ["React", "Firebase", "Tailwind"],
-      demoLink: "#",
-      codeLink: "#",
-    },
-  ]
+const projects = [
+  {
+    title: "Online Code Runner",
+    description: "A full-stack Online Code Runner built with React and Node.js",
+    image: project_1,
+    github: "https://github.com/FZRAJPUT/online-compiler",
+    demo: "#",
+    tags: ["React", "Node.js", "MongoDB", "Express.js"],
+  },
+  {
+    title: "Online Food Order Website",
+    description: "Online Food Ordering platform with payment integration",
+    image: project_2,
+    github: "https://github.com/FZRAJPUT/Happy-Food",
+    demo: "https://happy-food-virid.vercel.app/",
+    tags: ["React", "MongoDB", "Express", "Node.js"],
+  },
+  {
+    title: "Images Search Website",
+    description: "An website where you can find any type of images.",
+    image: project_3,
+    github: "https://github.com/FZRAJPUT/image-Hub",
+    demo: "https://image-hub-pi.vercel.app",
+    tags: ["React", "Stripe", "Firebase"],
+  },
+  {
+    title: "3D Navigation Android App",
+    description: "An Application in which you can navigate in 3D view of places and buildings.",
+    image: project_4,
+    github: "https://github.com/FZRAJPUT/3D-Explorer",
+    demo: "#",
+    tags: ["React Native", "Node.js", "MongoDB", "MappedIn"],
+  },
+  {
+    title: "Simple Weather Website",
+    description: "An website where you can search weather about your city.",
+    image: project_5,
+    github: "https://github.com/FZRAJPUT/ClimBuzz",
+    demo: "https://clima-buzz.vercel.app",
+    tags: ["React", "API's", "OpenWeatherMap API"],
+  },
+]
 
+export default function Projects() {
   return (
-    (<section id="projects" className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">My Projects</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
-            <ProjectCard key={project.title} {...project} />
+    <section id="projects" className="py-24">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+      >
+        <h2 className="text-3xl font-bold text-center mb-8">Projects</h2>
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {projects.map((project, index) => (
+            <Card key={index} className="overflow-hidden group">
+              <CardHeader className="p-0">
+                <div className="overflow-hidden">
+                  <img
+                    src={project.image || "/placeholder.svg"}
+                    alt={project.title}
+                    className="w-full h-[200px] object-cover transition-transform group-hover:scale-105"
+                  />
+                </div>
+              </CardHeader>
+              <CardContent className="p-6">
+                <CardTitle className="mb-2">{project.title}</CardTitle>
+                <CardDescription className="mb-4">{project.description}</CardDescription>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.tags.map((tag) => (
+                    <span key={tag} className="px-2 py-1 text-xs rounded-full bg-primary/10 text-primary">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </CardContent>
+              <CardFooter className="flex gap-4">
+                <Button variant="outline" size="sm">
+                  <Github className="w-4 h-4 mr-2" />
+                  Code
+                </Button>
+                <Button size="sm">
+                  <Globe className="w-4 h-4 mr-2" />
+                  Demo
+                </Button>
+              </CardFooter>
+            </Card>
           ))}
         </div>
-      </div>
-    </section>)
-  );
+      </motion.div>
+    </section>
+  )
 }
-
-export default Projects
 

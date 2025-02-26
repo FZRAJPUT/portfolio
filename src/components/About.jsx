@@ -1,73 +1,71 @@
 import React from "react";
-import images from "../assets/images";
+import { motion } from "framer-motion";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import {
-  FaReact,
-  FaNodeJs,
-  FaJs,
-  FaHtml5,
-  FaCss3Alt,
-  FaGitAlt,
-  FaDatabase,
-  FaLock,
-} from "react-icons/fa";
-import { SiExpress, SiMongodb, SiPostman, SiCplusplus, SiThunderbird, SiRedux } from "react-icons/si";
-import { TbApi } from "react-icons/tb";
+  SiReact,
+  SiNodedotjs,
+  SiTailwindcss,
+  SiMongodb,
+  SiExpress,
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiGithub
+} from "react-icons/si";
+import { FaReact } from "react-icons/fa";
 
 const skills = [
-  { name: "React.js", icon: <FaReact className="text-blue-500 text-3xl" /> },
-  { name: "React Native", icon: <FaReact className="text-blue-400 text-3xl" /> },
-  { name: "Node.js", icon: <FaNodeJs className="text-green-500 text-3xl" /> },
-  { name: "Express.js", icon: <SiExpress className="text-gray-800 text-3xl" /> },
-  { name: "MongoDB", icon: <SiMongodb className="text-green-600 text-3xl" /> },
-  { name: "C++", icon: <SiCplusplus className="text-blue-600 text-3xl" /> },
-  { name: "HTML", icon: <FaHtml5 className="text-orange-500 text-3xl" /> },
-  { name: "CSS", icon: <FaCss3Alt className="text-blue-500 text-3xl" /> },
-  { name: "Git", icon: <FaGitAlt className="text-red-500 text-3xl" /> },
-  { name: "JWT", icon: <FaLock className="text-yellow-500 text-3xl" /> },
-  { name: "REST API", icon: <TbApi className="text-purple-500 text-3xl" /> },
-  { name: "Postman", icon: <SiPostman className="text-orange-400 text-3xl" /> },
-  { name: "Thunder Client", icon: <SiThunderbird className="text-blue-400 text-3xl" /> },
-  { name: "Redux", icon: <SiRedux className="text-purple-600 text-3xl" /> },
+  { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-cyan-500" },
+  { name: "React", icon: SiReact, color: "text-blue-500" },
+  { name: "Node.js", icon: SiNodedotjs, color: "text-green-600" },
+  { name: "React Native", icon: FaReact, color: "text-blue-500" },
+  { name: "Express.js", icon: SiExpress, color: "text-gray-800" },
+  { name: "MongoDB", icon: SiMongodb, color: "text-green-500" },
+  { name: "HTML", icon: SiHtml5, color: "text-orange-500" },
+  { name: "CSS", icon: SiCss3, color: "text-blue-500" },
+  { name: "JavaScript", icon: SiJavascript, color: "text-yellow-500" },
+  { name: "GitHub", icon: SiGithub, color: "text-purple-800" },
 ];
 
-const About = () => {
+export default function About() {
   return (
-    <section id="about" className="container py-24 sm:py-32">
-      <div className="grid gap-10 px-10 md:grid-cols-2">
-        <div>
-          <h2 className="text-3xl font-bold mb-4">About Me</h2>
-          <p className="text-muted-foreground mb-6">
-            I'm a full-stack developer with a passion for creating beautiful and functional web applications.
-            With over 1 year of experience in web development, I specialize in building modern, responsive, and
-            user-friendly applications.
-          </p>
+    <section id="about" className="py-24">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+        className="flex flex-col items-center"
+      >
+        <h2 className="text-3xl font-bold text-center mb-8">About Me</h2>
+        <Card className="max-w-3xl mx-auto">
+          <CardContent className="pt-6">
+            <p className="text-lg text-muted-foreground mb-6">
+              I'm a passionate Full Stack Developer with 1 year of experience
+              building web applications. I specialize in creating responsive,
+              user-friendly interfaces and scalable backend systems.
+            </p>
+          </CardContent>
+        </Card>
 
-          <h3 className="text-xl font-bold mb-4">My Skills</h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {skills.map((skill, index) => (
-              <div
-                key={index}
-                className="flex flex-col items-center justify-center p-4 border rounded-lg shadow-md hover:shadow-lg transition duration-300 bg-white"
+        {/* Skills Section */}
+        <div className="mt-12 max-w-[750px] text-center">
+          <h3 className="text-xl font-semibold mb-6">Skills</h3>
+          <div className="flex  flex-wrap justify-center gap-4">
+            {skills.map((skill) => (
+              <Badge
+                key={skill.name}
+                variant="secondary"
+                className="flex cursor-pointer items-center gap-2 px-4 py-2 text-lg transition-transform transform hover:scale-105 hover:bg-gray-100 shadow-lg border border-gray-200 rounded-lg"
               >
-                {skill.icon}
-                <p className="mt-2 text-sm font-medium">{skill.name}</p>
-              </div>
+                {React.createElement(skill.icon, { size: 24, className: skill.color })}
+                <span className="font-medium text-gray-800">{skill.name}</span>
+              </Badge>
             ))}
           </div>
         </div>
-        
-        <div className="relative flex justify-center">
-          <img
-            src={images.pic}
-            alt="Profile"
-            className="rounded-lg object-cover"
-            width={400}
-            height={400}
-          />
-        </div>
-      </div>
+      </motion.div>
     </section>
   );
-};
-
-export default About;
+}

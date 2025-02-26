@@ -1,22 +1,33 @@
-import Navbar from "./components/Navbar"
-import Hero from "./components/Hero"
-import About from "./components/About"
-import Projects from "./components/Projects"
-import Resume from "./components/Resume"
-import Contact from "./components/Contact"
-import Footer from "./components/Footer"
-import './App.css'
+import { BrowserRouter as Router } from "react-router-dom"
+import { ThemeProvider } from "./components/theme-provider"
+import Navbar from "./components/navbar"
+import Hero from "./components/hero"
+import About from "./components/about"
+import Experience from "./components/experience"
+import Projects from "./components/projects"
+import Contact from "./components/contact"
+import Footer from "./components/footer"
+import Education from "./components/Education"
 
-export default function Home() {
+function App() {
   return (
-    <main className="min-h-screen">
-      <Navbar />
-      <Hero />
-      <About />
-      <Projects />
-      <Resume />
-      <Contact />
-      <Footer />
-    </main>
+    <Router>
+      <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
+        <div className="min-h-screen bg-background">
+          <Navbar />
+          <main className="container mx-auto flex flex-col items-center px-4">
+            <Hero />
+            <About />
+            <Experience />
+            <Education />
+            <Projects />
+            <Contact />
+          </main>
+          <Footer />
+        </div>
+      </ThemeProvider>
+    </Router>
   )
 }
+
+export default App

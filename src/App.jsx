@@ -1,6 +1,6 @@
 import { BrowserRouter as Router } from "react-router-dom"
 import { ThemeProvider } from "./components/ThemeProvider"
-import Navbar from "./components/navbar"
+import Navbar from "./components/Navbar"
 import Hero from "./components/hero"
 import About from "./components/about"
 import Experience from "./components/experience"

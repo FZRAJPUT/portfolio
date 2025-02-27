@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
 import { ArrowRight, Download, Github, Instagram, Linkedin, Twitter } from "lucide-react";
-import profile from "./profile.jpeg";
+import profile from "./profile.jpg";
 import resume from './_subhash_1.pdf'
 
 export default function Hero() {
@@ -35,11 +35,11 @@ export default function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <div className="relative w-32 h-32 mb-8 mx-auto">
+        <div className="relative rounded-full w-32 h-32 mb-8 overflow-hidden border-2 border-primary mx-auto">
           <img
             src={profile}
             alt="Profile"
-            className="rounded-full border-2 border-primary"
+            className="rounded-full w-32 h-32 object-cover object-center scale-[2]"
             width={128}
             height={128}
           />

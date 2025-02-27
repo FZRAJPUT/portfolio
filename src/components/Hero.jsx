@@ -51,7 +51,7 @@ export default function Hero() {
         </h2>
         <div className="flex gap-4 justify-center mb-8">
           <a href="https://github.com/FZRAJPUT" target="_blank">
-            <Button variant="outline" size="icon">
+            <Button variant="outline" size="icon" >
               <Github className="w-5 h-5" />
             </Button>
           </a>

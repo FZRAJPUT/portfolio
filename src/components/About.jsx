@@ -11,7 +11,9 @@ import {
   SiHtml5,
   SiCss3,
   SiJavascript,
-  SiGithub
+  SiGithub,
+  SiC,
+  SiCplusplus, // Added icons
 } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
 
@@ -20,12 +22,14 @@ const skills = [
   { name: "React", icon: SiReact, color: "text-blue-500" },
   { name: "Node.js", icon: SiNodedotjs, color: "text-green-600" },
   { name: "React Native", icon: FaReact, color: "text-blue-500" },
-  { name: "Express.js", icon: SiExpress, color: "text-gray-800" },
+  { name: "Express.js", icon: SiExpress, color: "text-green-800" },
   { name: "MongoDB", icon: SiMongodb, color: "text-green-500" },
   { name: "HTML", icon: SiHtml5, color: "text-orange-500" },
   { name: "CSS", icon: SiCss3, color: "text-blue-500" },
   { name: "JavaScript", icon: SiJavascript, color: "text-yellow-500" },
   { name: "GitHub", icon: SiGithub, color: "text-purple-800" },
+  { name: "C", icon: SiC, color: "text-blue-700" }, // Added C
+  { name: "C++", icon: SiCplusplus, color: "text-blue-600" }, // Added C++
 ];
 
 export default function About() {
@@ -57,10 +61,10 @@ export default function About() {
               <Badge
                 key={skill.name}
                 variant="secondary"
-                className="flex cursor-pointer items-center gap-2 px-4 py-2 text-lg transition-transform transform hover:scale-105 hover:bg-gray-100 shadow-lg border border-gray-200 rounded-lg"
+                className="flex cursor-pointer items-center gap-2 px-4 py-2 text-lg transition-transform transform hover:scale-105 hover:bg-gray-100 hover:text-gray-500 shadow-lg rounded-lg"
               >
-                {React.createElement(skill.icon, { size: 24, className: skill.color })}
-                <span className="font-medium text-gray-800">{skill.name}</span>
+                {React.createElement(skill.icon, { size: 22, className: skill.color })}
+                {skill.name}
               </Badge>
             ))}
           </div>

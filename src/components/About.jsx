@@ -13,23 +13,30 @@ import {
   SiJavascript,
   SiGithub,
   SiC,
-  SiCplusplus, // Added icons
+  SiCplusplus,
+  SiJsonwebtokens,
+  SiPostman,
+  SiVercel,
 } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
 
 const skills = [
-  { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-cyan-500" },
-  { name: "React", icon: SiReact, color: "text-blue-500" },
-  { name: "Node.js", icon: SiNodedotjs, color: "text-green-600" },
-  { name: "React Native", icon: FaReact, color: "text-blue-500" },
-  { name: "Express.js", icon: SiExpress, color: "text-green-800" },
   { name: "MongoDB", icon: SiMongodb, color: "text-green-500" },
+  { name: "Express.js", icon: SiExpress, color: "text-green-800" },
+  { name: "React.js", icon: SiReact, color: "text-blue-500" },
+  { name: "Node.js", icon: SiNodedotjs, color: "text-green-600" },
+  { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-cyan-500" },
+  { name: "React Native", icon: FaReact, color: "text-blue-500" },
   { name: "HTML", icon: SiHtml5, color: "text-orange-500" },
   { name: "CSS", icon: SiCss3, color: "text-blue-500" },
   { name: "JavaScript", icon: SiJavascript, color: "text-yellow-500" },
   { name: "GitHub", icon: SiGithub, color: "text-purple-800" },
-  { name: "C", icon: SiC, color: "text-blue-700" }, // Added C
-  { name: "C++", icon: SiCplusplus, color: "text-blue-600" }, // Added C++
+  { name: "C", icon: SiC, color: "text-blue-700" },
+  { name: "C++", icon: SiCplusplus, color: "text-blue-600" },
+  { name: "JWT", icon: SiJsonwebtokens, color: "text-red-500" }, // JWT Authentication
+  { name: "API's", icon: SiPostman, color: "text-orange-600" }, // API Testing
+  { name: "RESTful API's", icon: SiPostman, color: "text-orange-600" }, // API Handling
+  { name: "ShadCN", icon: SiVercel, color: "text-black" }, // Best alternative icon
 ];
 
 export default function About() {
@@ -53,7 +60,6 @@ export default function About() {
           </CardContent>
         </Card>
 
-        {/* Skills Section */}
         <div className="mt-12 max-w-[750px] text-center">
           <h3 className="text-xl font-semibold mb-6">Skills</h3>
           <div className="flex  flex-wrap justify-center gap-4">

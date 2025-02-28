@@ -12,8 +12,9 @@ import { Github, Globe } from "lucide-react";
 import project_1 from "./project-1.png";
 import project_2 from "./project-2.jpg";
 import project_3 from "./project-3.jpg";
-import project_4 from "./project-4.avif";
+import project_4 from "./navigation.png";
 import project_5 from "./project-5.jpg";
+import project_6 from "./sylabus-1.jpg";
 
 const projects = [
   {
@@ -21,8 +22,25 @@ const projects = [
     description: "A full-stack Online Code Runner built with React and Node.js",
     image: project_1,
     github: "https://github.com/FZRAJPUT/online-compiler",
-    demo: "#",
+    demo: null,
     tags: ["React", "Node.js", "MongoDB", "Express.js"],
+  },
+  {
+    title: "ExamVault",
+    description: "An Android app in which students can find PYQ's and Syllabus of there courses and Departments.",
+    image: project_6,
+    github: null,
+    demo: null,
+    tags: ["React Native", "API's", "Node.js", "MongoDB"],
+  },
+  {
+    title: "3D Navigation",
+    description:
+      "An android Application in which you can navigate in 3D view of places and buildings.",
+    image: project_4,
+    github: "https://github.com/FZRAJPUT/3D-Explorer",
+    demo: null,
+    tags: ["React Native", "Node.js", "MongoDB", "MappedIn"],
   },
   {
     title: "Online Food Order Website",
@@ -33,30 +51,23 @@ const projects = [
     tags: ["React", "MongoDB", "Express", "Node.js"],
   },
   {
-    title: "Images Search Website",
-    description: "An website where you can find any type of images.",
+    title: "Image-Hub",
+    description: "A website where you can find any type of images.",
     image: project_3,
     github: "https://github.com/FZRAJPUT/image-Hub",
     demo: "https://image-hub-pi.vercel.app",
     tags: ["React", "Stripe", "Firebase"],
   },
+  
   {
-    title: "3D Navigation Android App",
-    description:
-      "An Application in which you can navigate in 3D view of places and buildings.",
-    image: project_4,
-    github: "https://github.com/FZRAJPUT/3D-Explorer",
-    demo: "#",
-    tags: ["React Native", "Node.js", "MongoDB", "MappedIn"],
-  },
-  {
-    title: "Simple Weather Website",
-    description: "An website where you can search weather about your city.",
+    title: "ClimBuzz",
+    description: "A website where you can search weather about your city.",
     image: project_5,
     github: "https://github.com/FZRAJPUT/ClimBuzz",
     demo: "https://clima-buzz.vercel.app",
     tags: ["React", "API's", "OpenWeatherMap API"],
   },
+  
 ];
 
 export default function Projects() {
@@ -77,7 +88,7 @@ export default function Projects() {
                   <img
                     src={project.image || "/placeholder.svg"}
                     alt={project.title}
-                    className="w-full h-[200px] object-cover transition-transform group-hover:scale-105"
+                    className="w-full h-[200px] object-cover transition-all group-hover:scale-105"
                   />
                 </div>
               </CardHeader>
@@ -107,7 +118,9 @@ export default function Projects() {
                 <a href={project.demo} target="_blank">
                   <Button size="sm">
                     <Globe className="w-4 h-4 mr-2" />
-                    Demo
+                    {
+                      project.demo === null ? "Not Available" : "Demo"
+                    }
                   </Button>
                 </a>
               </CardFooter>

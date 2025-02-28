@@ -56,7 +56,7 @@ export default function Experience() {
                     <div className="flex-1">
                       <CardTitle className="flex items-center justify-between">
                         <span>{experience.title}</span>
-                        <span className="text-sm text-muted-foreground">{experience.period}</span>
+                        <span className="text-[10px] text-muted-foreground">{experience.period}</span>
                       </CardTitle>
                       <p className="text-muted-foreground">{experience.company}</p>
                     </div>

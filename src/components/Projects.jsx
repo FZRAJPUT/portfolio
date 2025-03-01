@@ -80,7 +80,7 @@ export default function Projects() {
         viewport={{ once: true }}
       >
         <h2 className="text-3xl font-bold text-center mb-8">Projects</h2>
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2 max-w-[750px]">
           {projects.map((project, index) => (
             <Card key={index} className="overflow-hidden group">
               <CardHeader className="p-0">

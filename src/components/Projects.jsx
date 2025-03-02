@@ -55,7 +55,7 @@ const projects = [
     description: "A website where you can find any type of images.",
     image: project_3,
     github: "https://github.com/FZRAJPUT/image-Hub",
-    demo: "https://image-hub-pi.vercel.app",
+    demo: "https://image-hub1.vercel.app",
     tags: ["React", "Stripe", "Firebase"],
   },
   

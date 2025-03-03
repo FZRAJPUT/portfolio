@@ -45,7 +45,6 @@ export default function Education() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ delay: index * 0.2, duration: 0.5, ease: "easeOut" }}
-          whileHover={{ scale: 1.03 }}
         >
           <Card className="overflow-hidden">
             <CardHeader className="flex flex-row items-center gap-4">

@@ -8,15 +8,22 @@ const experiences = [
     title: "Web Developer Intern",
     company: "SimTrak Solutions",
     period: "Nov-2024 - Present",
-    description:
-      "Led development of multiple web applications using React and Node.js. Managed team members and implemented scalable Back-End.",
+    description:[
+      "Led the development of responsive web applications using React.js and Node.js.",
+      "Built scalable REST APIs and integrated MongoDB for efficient data management.",
+      "Managed a team of developers, conducted code reviews, and ensured best coding practices.",
+      "Implemented secure authentication, optimized performance, and streamlined deployment workflows."
+    ],
     skills: ["React", "Node.js", "MongoDB", "Team Leadership"],
   },
   {
     title: "Web Developer Trainee",
     company: "InfoWiz",
     period: "June-2024 - July-2024",
-    description: "Developed and maintained various client projects. Implemented responsive designs and RESTful APIs.",
+    description: [
+      "Developed and maintained multiple client projects with clean, modular code.",
+      "Built responsive UIs and integrated RESTful APIs for seamless data flow across platforms.",
+    ],
     skills: ["React", "Express.js", "Node.js", "MongoDB"],
   },
   {
@@ -63,8 +70,13 @@ export default function Experience() {
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <p className="mb-4">{experience.description}</p>
-                  <div className="flex flex-wrap gap-2">
+                  <ul className="list-disc">
+                    <li className="text-[12px] mb-3">{experience.description[0]}</li>
+                    <li className="text-[12px] mb-3">{experience.description[1]}</li>
+                    <li className="text-[12px] mb-3">{experience.description[2]}</li>
+                    <li className="text-[12px] mb-3">{experience.description[3]}</li>
+                  </ul>
+                  <div className="flex flex-wrap mt-6 gap-2">
                     {experience.skills.map((skill) => (
                       <Badge key={skill} variant="secondary">
                         {skill}

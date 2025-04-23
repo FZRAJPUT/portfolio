@@ -60,7 +60,7 @@ export default function Hero() {
               <Linkedin className="w-5 h-5" />
             </Button>
           </a>
-          <a href="https://www.instagram.com/subhash_kushwahaa" target="_blank">
+          <a href="https://www.instagram.com/subhash_kushwaah" target="_blank">
             <Button variant="outline" size="icon">
               <Instagram />
             </Button>

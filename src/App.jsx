@@ -8,6 +8,7 @@ import Education from "./components/Education"
 import Projects from "./components/Projects"
 import Contact from "./components/Contact"
 import Footer from "./components/Footer"
+import Ballpit from "./components/Ballpit"
 
 function App() {
   return (
@@ -16,12 +17,7 @@ function App() {
         <div className="min-h-screen bg-background">
           <Navbar />
           <main className="container mx-auto flex flex-col items-center px-4">
-            <Hero />
-            <About />
-            <Experience />
-            <Education />
-            <Projects />
-            <Contact />
+          <Ballpit />
           </main>
           <Footer />
         </div>

@@ -5,21 +5,20 @@ import ClientLayout from "./client"
 import { Suspense } from "react"
 
 export const metadata: Metadata = {
-  title: "Nihal Maskey | Senior Software Engineer",
+  title: "Subhash Kumar | Full Stack Engineer",
   description:
-    "Portfolio of Nihal Maskey, a Senior Software Engineer specializing in JavaScript, TypeScript, React.js, Node.js, Laravel, and AWS.",
+    "Portfolio of Subhash Kumar, a Senior Full Stack Engineer specializing in JavaScript, TypeScript, React.js, Node.js.",
   keywords: [
-    "Nihal Maskey",
+    "Subhash Kumar",
     "Software Engineer",
     "Full Stack Developer",
     "JavaScript",
     "TypeScript",
     "React",
     "Node.js",
-    "AWS",
   ],
-  authors: [{ name: "Nihal Maskey" }],
-  creator: "Nihal Maskey",
+  authors: [{ name: "Subhash Kumar" }],
+  creator: "Subhash Kumar",
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
@@ -27,36 +26,10 @@ export const metadata: Metadata = {
     ],
     apple: [{ url: "/apple-touch-icon.png" }],
   },
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: "https://nihalmaskey.com",
-    title: "Nihal Maskey | Senior Software Engineer",
-    description:
-      "Portfolio of Nihal Maskey, a Senior Software Engineer specializing in JavaScript, TypeScript, React.js, Node.js, Laravel, and AWS.",
-    siteName: "Nihal Maskey Portfolio",
-    images: [
-      {
-        url: "/favicon.png",
-        width: 512,
-        height: 512,
-        alt: "Nihal Maskey Logo",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Nihal Maskey | Senior Software Engineer",
-    description:
-      "Portfolio of Nihal Maskey, a Senior Software Engineer specializing in JavaScript, TypeScript, React.js, Node.js, Laravel, and AWS.",
-    creator: "@maskeynihal",
-    images: ["/favicon.png"],
-  },
   robots: {
     index: true,
     follow: true,
-  },
-    generator: 'v0.app'
+  }
 }
 
 export default function RootLayout({

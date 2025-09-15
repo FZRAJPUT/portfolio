@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { ArrowUpCircle, Download, Github, Linkedin, Mail } from "lucide-react"
+import { ArrowUpCircle, Download, Github, Instagram, Linkedin, Mail } from "lucide-react"
 import Link from "next/link"
 
 export default function Hero() {
@@ -10,48 +10,54 @@ export default function Hero() {
       <div className="container px-4 md:px-6 mx-auto">
         <div className="flex flex-col items-center space-y-4 text-center">
           <div className="space-y-2">
-            <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-              Hi, I&apos;m <span className="gradient-text">Nihal Maskey</span>
+            <h1 className="text-2xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
+              Hi, I&apos;m <span className="gradient-text">Subhash Kumar</span>
             </h1>
             <p className="mx-auto max-w-[700px] text-xl text-muted-foreground md:text-2xl">
               <span className="js-only">
-                <span>Senior Software Engineer</span>
+                <span>Full Stack Engineer</span>
               </span>
               <noscript>
-                <span>Senior Software Engineer | Full Stack Developer | JavaScript Expert | AWS Specialist</span>
+                <span>Full Stack Developer | JavaScript Expert</span>
               </noscript>
             </p>
           </div>
           <div className="max-w-[700px] text-muted-foreground">
-            <p className="text-lg">Building scalable, secure, and efficient systems with over 5 years of experience</p>
+            <p className="text-lg">Building scalable, secure, and efficient systems with over 1 years of experience</p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 mt-6">
             <Button asChild size="lg" className="rounded-full">
               <Link href="#contact">Get In Touch</Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="rounded-full">
-              <a href="https://resume.nihal.com.np/nihal_maskey.pdf" target="_blank" rel="noopener noreferrer">
-                <Download className="mr-2 h-4 w-4" /> Download Resume
+              <a href="https://docs.google.com/document/d/1qLdza3OCyURxrQAh9soSGz7aegV7cUYEQ_QpAGAR6nU/edit?tab=t.0" target="_blank" rel="noopener noreferrer">
+                <Download className="mr-2 h-4 w-4" /> Resume
               </a>
             </Button>
           </div>
           <div className="flex gap-4 mt-6">
             <Button variant="ghost" size="icon" asChild>
-              <Link href="https://github.com/maskeynihal" target="_blank" rel="noopener noreferrer">
+              <Link href="https://github.com/FZRAJPUT" target="_blank" rel="noopener noreferrer">
                 <Github className="h-5 w-5" />
                 <span className="sr-only">GitHub</span>
               </Link>
             </Button>
             <Button variant="ghost" size="icon" asChild>
-              <Link href="https://linkedin.com/in/maskeynihal" target="_blank" rel="noopener noreferrer">
+              <Link href="https://www.linkedin.com/in/subhash-kumar-f98z/" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
               </Link>
             </Button>
             <Button variant="ghost" size="icon" asChild>
-              <Link href="mailto:t3w4e0rdaf6f@opayq.com">
+              <Link href="mailto:subbhashkushwah134@gmail.com">
                 <Mail className="h-5 w-5" />
                 <span className="sr-only">Email</span>
+              </Link>
+            </Button>
+            <Button variant="ghost" size="icon" asChild>
+              <Link href="https://instagram.com/subhash_kushwaah">
+                <Instagram className="h-5 w-5" />
+                <span className="sr-only">Instagram</span>
               </Link>
             </Button>
           </div>

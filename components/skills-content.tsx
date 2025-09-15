@@ -5,23 +5,19 @@ export default function SkillsContent() {
   const skillCategories = [
     {
       category: "Frontend",
-      skills: ["JavaScript", "TypeScript", "React.js", "HTML/CSS", "Tailwind CSS"],
+      skills: ["JavaScript", "TypeScript", "React.js","React Native", "HTML/CSS", "Tailwind CSS"],
     },
     {
       category: "Backend",
-      skills: ["Node.js", "PHP", "Laravel", "Express.js", "RESTful APIs"],
+      skills: ["Node.js", "Express.js", "RESTful APIs", "JWT"],
     },
     {
       category: "Database",
-      skills: ["MySQL", "PostgreSQL", "DynamoDB", "MongoDB", "Redis"],
-    },
-    {
-      category: "Cloud & DevOps",
-      skills: ["AWS", "GitHub Actions", "Travis-CI", "Docker", "CI/CD"],
+      skills: ["MySQL", "MongoDB"],
     },
     {
       category: "Tools & Methodologies",
-      skills: ["Git", "Agile", "Scrum", "JIRA", "Figma"],
+      skills: ["Git", "Render", "Vercel", "ShadCN", "PostMan" ],
     },
   ]
 

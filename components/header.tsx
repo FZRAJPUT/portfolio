@@ -18,7 +18,6 @@ const navItems = [
   { name: "Experience", href: "#experience" },
   { name: "Projects", href: "#projects" },
   { name: "Education", href: "#education" },
-  { name: "Blog", href: "#blog" },
   { name: "Contact Me", href: "#contact" },
 ]
 
@@ -33,7 +32,7 @@ export default function Header() {
     const sections = navItems.map((item) => item.href.substring(1))
 
     // Add the sections that are not in the navbar but still need to be detected
-    const allSections = [...sections, "open-source", "skills"]
+    const allSections = [...sections, "skills"]
 
     // Find the section that is currently in view
     for (let i = allSections.length - 1; i >= 0; i--) {
@@ -100,7 +99,7 @@ export default function Header() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <span className="text-2xl font-bold gradient-text">NM</span>
+            <span className="text-2xl font-bold gradient-text">SUBHASH KUMAR</span>
           </motion.div>
         </Link>
 

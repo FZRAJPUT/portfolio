@@ -2,38 +2,38 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { ExternalLink, Github } from "lucide-react"
 import Link from "next/link"
-import OpenSource from "./open-source"
 
 export default function Projects() {
   const projects = [
     {
-      title: "Pacman",
+      title: "ExamVault",
       description:
-        "A recreation of the classic Pacman game with vanilla JavaScript, implementing various path-finding algorithms for ghost movement.",
-      tags: ["JavaScript", "Canvas API", "Path-finding Algorithms"],
-      codeLink: "https://github.com/maskeynihal/pacman",
-      liveLink: "https://maskeynihal.github.io/pacman/",
+        "ExamVault is an academic tool designed to provide students with comprehensive syllabi, previous year question papers, and personalized features to enhance their study experience.",
+      tags: ["React.js", "Node.js", "Express.js", "MongoDB", "React Native"],
+      codeLink: "https://github.com/FZRAJPUT/upload_pdf",
+      liveLink: "https://examvault1.vercel.app/",
     },
     {
-      title: "Flappy Bird",
-      description: "A clone of the popular Flappy Bird game built with vanilla JavaScript and HTML5 Canvas.",
+      title: "CodeCompiler",
+      description: "An online HTML, CSS, and JavaScript editor that lets users write, edit, and preview code in real time. Designed for practicing, testing snippets, and learning web development interactively.",
       tags: ["JavaScript", "Canvas API", "Game Development"],
-      codeLink: "https://github.com/maskeynihal/flappy-bird",
-      liveLink: "https://maskeynihal.github.io/flappy-bird/",
+      codeLink: "https://github.com/FZRAJPUT/HTML_Editor",
+      liveLink: "https://html-editor-ten.vercel.app/",
     },
     {
-      title: "Pursue - Job Handling with AWS",
+      title: "Poultry Farm Feed Management System",
       description:
-        "A JavaScript package for handling job processing using AWS services like SQS, Lambda, and Step Functions.",
-      tags: ["Node.js", "AWS", "SQS", "Lambda", "npm package"],
-      codeLink: "https://github.com/maskeynihal/pursue",
+        "A web-based management system designed for poultry farms to handle employee tasks, product records, and order management.",
+      tags: ["MERN Stack", "Node.js", "Express.js", "MongoDB", "React.js"],
+      codeLink: "https://github.com/your-username/poultry-farm-management",
       liveLink: null,
     },
     {
-      title: "Mailer",
-      description: "A JavaScript package to prepare and send emails using AWS SES, with templating support.",
-      tags: ["Node.js", "AWS", "SES", "Email Templates", "npm package"],
-      codeLink: "https://github.com/maskeynihal/mailer",
+      title: "Sphere",
+      description:
+        "A modern social media platform built with React Native that enables users to create posts, like, comment, and interact in real time.",
+      tags: ["React.js Native", "Node.js", "MongoDB", "Express.js", "REST API"],
+      codeLink: "https://github.com/randeep88/sphere",
       liveLink: null,
     },
   ]
@@ -57,7 +57,7 @@ export default function Projects() {
                     <h3 className="text-lg font-bold">{project.title}</h3>
                     <p className="text-sm text-muted-foreground mt-2 flex-1">{project.description}</p>
                     <div className="project-tags mt-3">
-                      {project.tags.slice(0, 3).map((tag, i) => (
+                      {project.tags.map((tag, i) => (
                         <span key={i} className="project-tag">
                           {tag}
                         </span>
@@ -81,11 +81,6 @@ export default function Projects() {
                 </Card>
               </div>
             ))}
-          </div>
-
-          {/* Include Open Source section directly under Projects */}
-          <div className="mt-20">
-            <OpenSource />
           </div>
         </div>
       </div>

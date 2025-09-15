@@ -9,20 +9,20 @@ export default function Contact() {
     {
       icon: <Mail className="h-6 w-6 text-primary" />,
       title: "Email",
-      value: "t3w4e0rdaf6f@opayq.com",
-      link: "mailto:t3w4e0rdaf6f@opayq.com",
+      value: "subhashkushwah134@gmail.com",
+      link: "mailto:subhashkushwah134@gmail.com",
     },
     {
       icon: <MapPin className="h-6 w-6 text-primary" />,
       title: "Location",
-      value: "Kathmandu, Nepal",
-      link: "https://maps.google.com/?q=Kathmandu,Nepal",
+      value: "Bathinda,Punjab",
+      link: "https://maps.google.com/?q=Bathinda,Punjab",
     },
     {
       icon: <Phone className="h-6 w-6 text-primary" />,
       title: "Phone",
-      value: "Available on request",
-      link: null,
+      value: "9855369230",
+      link: "9855369230",
     },
   ]
 
@@ -98,7 +98,7 @@ export default function Contact() {
                         {info.link ? (
                           <a
                             href={info.link}
-                            className="text-muted-foreground hover:text-primary transition-colors"
+                            className="text-muted-foreground hover:text-primary text-[14px] transition-colors"
                             target={info.title === "Location" ? "_blank" : undefined}
                             rel={info.title === "Location" ? "noopener noreferrer" : undefined}
                           >
@@ -118,7 +118,7 @@ export default function Contact() {
                     <p className="text-sm text-muted-foreground mb-4">Find me on these platforms</p>
                     <div className="flex gap-4">
                       <Button variant="outline" size="icon" asChild>
-                        <a href="https://github.com/maskeynihal" target="_blank" rel="noopener noreferrer">
+                        <a href="https://github.com/FZRAJPUT" target="_blank" rel="noopener noreferrer">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="24"
@@ -138,7 +138,7 @@ export default function Contact() {
                         </a>
                       </Button>
                       <Button variant="outline" size="icon" asChild>
-                        <a href="https://linkedin.com/in/maskeynihal" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.linkedin.com/in/subhash-kumar-f98z/" target="_blank" rel="noopener noreferrer">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="24"
@@ -159,7 +159,7 @@ export default function Contact() {
                         </a>
                       </Button>
                       <Button variant="outline" size="icon" asChild>
-                        <a href="mailto:t3w4e0rdaf6f@opayq.com">
+                        <a href="mailto:subhashkushwah134@gmail.com">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="24"
@@ -176,6 +176,27 @@ export default function Contact() {
                             <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
                           </svg>
                           <span className="sr-only">Email</span>
+                        </a>
+                      </Button>
+                      <Button variant="outline" size="icon" asChild>
+                        <a href="https://instagram.com/subhash_kushwaah" target="_blank">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            className="h-5 w-5"
+                          >
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                          </svg>
+                          <span className="sr-only">Instagram</span>
                         </a>
                       </Button>
                     </div>

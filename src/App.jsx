@@ -40,7 +40,6 @@ function App() {
   <Galaxy />
   <h1 className="absolute top-68">Subhash</h1>
 </div>
-
   )
 }
 

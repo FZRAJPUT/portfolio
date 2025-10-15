@@ -5,6 +5,14 @@ import Link from "next/link"
 
 export default function Projects() {
   const projects = [
+     {
+      title: "AttackDetector",
+      description:
+        "Developed AttackDetector, a web application that identifies and tracks URL-based attacks, enhancing web security for users. Implemented full-stack functionalities including Secure registration and login system with email verification and OTP validation.",
+      tags: ["React.js", "Node.js", "Express.js", "MongoDB"],
+      codeLink: "https://github.com/FZRAJPUT/URL-based_Attack_Detection_System",
+      liveLink: "https://attack-detector.vercel.app/",
+    },
     {
       title: "ExamVault",
       description:

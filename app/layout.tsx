@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   creator: "Subhash Kumar",
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/icon.png", type: "image/svg+xml" },
+      { url: "/favicon.png", sizes: "any" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
     ],
     apple: [{ url: "/apple-touch-icon.png" }],
   },

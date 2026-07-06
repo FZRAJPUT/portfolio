@@ -6,9 +6,9 @@ import Link from "next/link"
 export default function Projects() {
   const projects = [
      {
-      title: "AttackDetector",
+      title: "InputShield",
       description:
-        "Developed AttackDetector, a web application that identifies and tracks URL-based attacks, enhancing web security for users. Implemented full-stack functionalities including Secure registration and login system with email verification and OTP validation.",
+        "Developed InputShield, a web application that identifies and tracks Input-based attacks in HTML files, enhancing web security for users. Implemented full-stack functionalities including Secure registration and login system with email verification and OTP validation.",
       tags: ["React.js", "Node.js", "Express.js", "MongoDB"],
       codeLink: "https://github.com/FZRAJPUT/URL-based_Attack_Detection_System",
       liveLink: "https://attack-detector.vercel.app/",
@@ -29,20 +29,12 @@ export default function Projects() {
       liveLink: "https://html-editor-ten.vercel.app/",
     },
     {
-      title: "Poultry Farm Feed Management System",
+      title: "ChatZone",
       description:
-        "A web-based management system designed for poultry farms to handle employee tasks, product records, and order management.",
-      tags: ["MERN Stack", "Node.js", "Express.js", "MongoDB", "React.js"],
-      codeLink: "https://github.com/your-username/poultry-farm-management",
-      liveLink: null,
-    },
-    {
-      title: "Sphere",
-      description:
-        "A modern social media platform built with React Native that enables users to create posts, like, comment, and interact in real time.",
+        "Real-Time Messaging Web Application.",
       tags: ["React.js Native", "Node.js", "MongoDB", "Express.js", "REST API"],
-      codeLink: "https://github.com/randeep88/sphere",
-      liveLink: null,
+      codeLink: "https://github.com/ChatZone",
+      liveLink: "https://chatzone1.vercel.app",
     },
   ]
 
